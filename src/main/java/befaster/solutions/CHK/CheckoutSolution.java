@@ -82,7 +82,7 @@ public class CheckoutSolution {
 					}
 				}
 			}
-			else if(charsCount == 2) value = 50;
+			else if(charsCount == 2) value = 80;
 			else if(charsCount == 1) value = 40;
 		}
 
@@ -90,6 +90,7 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
 
