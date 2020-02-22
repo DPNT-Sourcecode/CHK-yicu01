@@ -5,7 +5,7 @@ public class CheckoutSolution {
 
 		if(skus != null && skus.matches("[A-D]+")) {
 			return charValue(skus, 'A')+charValue(skus, 'B')+charValue(skus, 'C')+charValue(skus, 'D');
-		} else if(skus.trim() == "" ) {
+		} else if(skus == "" ) {
 			return 0;
 		} else {
 			return -1;
@@ -59,4 +59,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
