@@ -31,16 +31,13 @@ public class CheckoutSolution {
 		if(c == 'A') {
 			if(charsCount > 3) {
 				value = 130;
-				System.out.println("charsCount ="+charsCount);
 				for(int i=2;i<charsCount-1;i++) {
-					System.out.println("value("+i+")"+value);
 					value += 50;
 				}
-				System.out.println("Total A value ="+value);
 			}
 			else if(charsCount == 3) value = 130;
 			else if(charsCount == 2) value = 100;
-			else value = 50;
+			else if(charsCount == 1) value = 50;
 		} else if(c == 'B') {
 			if(charsCount > 2) {
 				value = 45;
@@ -49,7 +46,7 @@ public class CheckoutSolution {
 				}
 			}
 			else if(charsCount == 2) value = 45;
-			else value = 30;
+			else if(charsCount == 1) value = 30;
 		} else if(c == 'C') {
 			for(int i=0; i<charsCount;i++) {
 				value += 20;
@@ -64,5 +61,6 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
