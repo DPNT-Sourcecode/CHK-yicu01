@@ -63,23 +63,24 @@ public class CheckoutSolution {
 			}
 		} else {
 			if(charsCount > 2) {
-				value = 40;
+				value = 50;
 				for(int i=2;i<charsCount;i++) {
 					if(charsCount > 3 && i == 3) {
-						value = 90;
+						value = 100;
 					} else {
-						value += 30;
+						value += 40;
 					}
 				}
 			}
-			else if(charsCount == 2) value = 45;
-			else if(charsCount == 1) value = 30;
+			else if(charsCount == 2) value = 50;
+			else if(charsCount == 1) value = 40;
 		}
 
 		return value;
 	}
 
 }
+
 
 
 
