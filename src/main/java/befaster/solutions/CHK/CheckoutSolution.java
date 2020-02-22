@@ -73,7 +73,7 @@ public class CheckoutSolution {
 			}
 		} else { //c='E'
 			if(charsCount > 2) {
-				value = 80;
+				value = 50;
 				for(int i=2;i<charsCount;i++) {
 					if(charsCount > 3 && i == 3) {
 						value = 100;
@@ -90,6 +90,7 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
 
