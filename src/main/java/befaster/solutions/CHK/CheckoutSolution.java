@@ -38,6 +38,8 @@ public class CheckoutSolution {
 						value = 300;
 					} else if(charsCount == 8 && i == 7) {
 						value = 330;
+					} else if(charsCount == 9 && i == 8) {
+						value = 380;
 					} else if(charsCount == 10 && i == 9) {
 						value = 400;
 					} else {
@@ -88,3 +90,4 @@ public class CheckoutSolution {
 	}
 
 }
+
