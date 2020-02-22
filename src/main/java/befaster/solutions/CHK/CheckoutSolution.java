@@ -3,7 +3,7 @@ package befaster.solutions.CHK;
 public class CheckoutSolution {
 	public Integer checkout(String skus) {
 
-		if(skus != null && skus.matches("[A-D]+")) {
+		if(skus != null && skus.matches("[A-E]+")) {
 			return charValue(skus, 'A')+charValue(skus, 'B')+charValue(skus, 'C')+charValue(skus, 'D');
 		} else if(skus.equals("")) {
 			return 0;
@@ -12,7 +12,7 @@ public class CheckoutSolution {
 		}
 
 	}
-	
+
 	private int charCount(String str, char c) {
 		int count = 0;
 		for(char ch: str.toCharArray()) {
@@ -57,16 +57,21 @@ public class CheckoutSolution {
 			for(int i=0; i<charsCount;i++) {
 				value += 20;
 			}
-		} else {
+		} else if(c == 'D') {
 			for(int i=0; i<charsCount;i++) {
 				value += 15;
 			}
+		} else {
+			for(int i=0; i<charsCount;i++) {
+				value += 40;
+			}
 		}
-		
+
 		return value;
 	}
 
 }
+
 
 
 
