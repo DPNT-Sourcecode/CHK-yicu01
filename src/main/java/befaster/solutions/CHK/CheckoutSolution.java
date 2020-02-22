@@ -90,10 +90,3 @@ public class CheckoutSolution {
 	}
 
 }
-
-
-
-
-
-
-
