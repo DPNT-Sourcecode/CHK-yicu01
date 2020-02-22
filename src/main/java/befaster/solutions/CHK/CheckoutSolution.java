@@ -28,7 +28,7 @@ public class CheckoutSolution {
 		int charsCount = charCount(str, c);
 		if(c == 'A') {
 			if(charsCount > 3) {
-				value += 130;
+				value = 130;
 				for(int i=3;i<charsCount;i++) {
 					if(charsCount == 5 && i == 4) {
 						value = 200;
@@ -82,4 +82,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
