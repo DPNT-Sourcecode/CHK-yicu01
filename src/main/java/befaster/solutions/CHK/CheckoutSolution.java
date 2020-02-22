@@ -28,9 +28,13 @@ public class CheckoutSolution {
 		int charsCount = charCount(str, c);
 		if(c == 'A') {
 			if(charsCount > 3) {
-				value = 130;
-				for(int i=2;i<charsCount-1;i++) {
-					value += 50;
+				value += 130;
+				for(int i=3;i<charsCount;i++) {
+					if(charsCount > 5 && i == 5) {
+						value = 260;
+					} else {
+						value += 50;
+					}
 				}
 			}
 			else if(charsCount == 3) value = 130;
@@ -39,7 +43,7 @@ public class CheckoutSolution {
 		} else if(c == 'B') {
 			if(charsCount > 2) {
 				value = 45;
-				for(int i=1;i<charsCount-1;i++) {
+				for(int i=2;i<charsCount;i++) {
 					value += 30;
 				}
 			}
@@ -59,3 +63,4 @@ public class CheckoutSolution {
 	}
 
 }
+
