@@ -62,15 +62,25 @@ public class CheckoutSolution {
 				value += 15;
 			}
 		} else {
-			for(int i=0; i<charsCount;i++) {
-				value += 40;
+			if(charsCount > 2) {
+				value = 40;
+				for(int i=2;i<charsCount;i++) {
+					if(charsCount > 3 && i == 3) {
+						value = 90;
+					} else {
+						value += 30;
+					}
+				}
 			}
+			else if(charsCount == 2) value = 45;
+			else if(charsCount == 1) value = 30;
 		}
 
 		return value;
 	}
 
 }
+
 
 
 
