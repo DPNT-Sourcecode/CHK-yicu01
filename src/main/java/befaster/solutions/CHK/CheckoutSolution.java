@@ -32,6 +32,8 @@ public class CheckoutSolution {
 				for(int i=3;i<charsCount;i++) {
 					if(charsCount == 5 && i == 4) {
 						value = 200;
+					} else if(charsCount == 6 && i == 5) {
+						value = 250;
 					} else if(charsCount > 7 && i == 7) {
 						value = 330;
 					} else {
@@ -82,6 +84,7 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
 
