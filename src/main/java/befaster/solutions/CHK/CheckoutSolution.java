@@ -13,7 +13,7 @@ public class CheckoutSolution {
 
 	}
 	
-	private static int charCount(String str, char c) {
+	private int charCount(String str, char c) {
 		int count = 0;
 		for(char ch: str.toCharArray()) {
 			if(ch == c) {
@@ -23,7 +23,7 @@ public class CheckoutSolution {
 		return count;
 	}
 
-	private static int charValue(String str, char c) {
+	private int charValue(String str, char c) {
 		int value = 0;
 		int charsCount = charCount(str, c);
 		if(c == 'A') {
@@ -44,7 +44,11 @@ public class CheckoutSolution {
 			if(charsCount > 2) {
 				value = 45;
 				for(int i=2;i<charsCount;i++) {
-					value += 30;
+					if(charsCount > 3 && i == 3) {
+						value = 90;
+					} else {
+						value += 30;
+					}
 				}
 			}
 			else if(charsCount == 2) value = 45;
@@ -63,4 +67,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
