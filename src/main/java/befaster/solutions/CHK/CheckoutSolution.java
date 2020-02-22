@@ -9,6 +9,9 @@ public class CheckoutSolution {
 		}
 
 		if(skus.matches("[A-D]+")) {
+			if(skus.matches("[A]+")) {
+				if(skus.length() == 3) x += 130;
+			}
 			if(skus.contains("AAA")) {
 				x += 130;
 			} 
@@ -35,3 +38,4 @@ public class CheckoutSolution {
 
 	}
 }
+
