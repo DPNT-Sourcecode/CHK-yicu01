@@ -34,6 +34,8 @@ public class CheckoutSolution {
 						value = 200;
 					} else if(charsCount == 6 && i == 5) {
 						value = 250;
+					} else if(charsCount == 7 && i == 6) {
+						value = 300;
 					} else if(charsCount > 7 && i == 7) {
 						value = 330;
 					} else {
@@ -84,6 +86,7 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
 
