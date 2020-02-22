@@ -4,6 +4,10 @@ public class CheckoutSolution {
 	public Integer checkout(String skus) {
 		int x = 0;
 
+		if(skus == null || skus.trim() == "" ) {
+			return 0;
+		}
+
 		if(skus.matches("[A-D]+")) {
 			if(skus.contains("AAA")) {
 				x += 130;
@@ -28,10 +32,6 @@ public class CheckoutSolution {
 		} else {
 			return -1;
 		}
-//		if(skus != null && skus.trim() != "" ) {
-//			skus = skus.toUpperCase();
-			
-//		}
 
 	}
 }
