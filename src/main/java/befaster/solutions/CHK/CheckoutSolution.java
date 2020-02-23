@@ -8,7 +8,8 @@ public class CheckoutSolution {
 		int charValueC = charValue(skus, 'C');
 		int charValueD = charValue(skus, 'D');
 		int charValueE = charValue(skus, 'E');
-		if(skus != null && skus.matches("[A-E]+")) {
+		int charValueF = charValue(skus, 'F');
+		if(skus != null && skus.matches("[A-F]+")) {
 			if(charCount(skus, 'A') >= 5) {
 				if(charCount(skus, 'A') < 8)
 					charValueA -= 50;
@@ -35,6 +36,11 @@ public class CheckoutSolution {
 			else if((charCount(skus, 'E') >= 4 && charCount(skus, 'B') == 2) && (charCount(skus, 'E') < 6 && charCount(skus, 'B') == 2)) 
 				charValueB -= 45;
 
+			if(charCount(skus, 'F') > 1 && charCount(skus, 'F') < 4) 
+				charValueF -= 10;
+			else if(charCount(skus, 'F') >= 4 && charCount(skus, 'F') < 6) 
+				charValueF -= 20;
+			
 			return charValueA + charValueB + charValueC + charValueD + charValueE;
 		} else if(skus.equals("")) return 0;
 		 else return -1;
@@ -80,5 +86,3 @@ public class CheckoutSolution {
 	}
 
 }
-
-
