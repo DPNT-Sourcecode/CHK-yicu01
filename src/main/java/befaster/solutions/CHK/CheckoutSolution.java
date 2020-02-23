@@ -3,8 +3,12 @@ package befaster.solutions.CHK;
 public class CheckoutSolution {
 	public Integer checkout(String skus) {
 
+		int charValueB = charValue(skus, 'B');
 		if(skus != null && skus.matches("[A-E]+")) {
-			return charValue(skus, 'A')+charValue(skus, 'B')+charValue(skus, 'C')+charValue(skus, 'D')+charValue(skus, 'E');
+			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') == 1) {
+				charValueB -= 30;
+			}
+			return charValue(skus, 'A')+charValue(skus, 'B')+charValueB+charValue(skus, 'D')+charValue(skus, 'E');
 		} else if(skus.equals("")) {
 			return 0;
 		} else {
@@ -90,3 +94,4 @@ public class CheckoutSolution {
 	}
 
 }
+
