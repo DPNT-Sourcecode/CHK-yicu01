@@ -12,7 +12,7 @@ public class CheckoutSolution {
 			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') >= 1 ) {
 				charValueB -= 30;
 			} else if(charCount(skus, 'E') == 4 && charCount(skus, 'B') >= 2) {
-				charValueB -= 60;
+				charValueB -= 45;
 			}
 			return charValueA + charValueB + charValueC + charValueD + charValueE;
 		} else if(skus.equals("")) {
@@ -82,23 +82,15 @@ public class CheckoutSolution {
 				value += 15;
 			}
 		} else { //c='E'
-			if(charsCount > 2) {
-				value = 50;
-				for(int i=2;i<charsCount;i++) {
-					if(charsCount > 3 && i == 3) {
-						value = 100;
-					} else {
-						value += 40;
-					}
-				}
+			for(int i=0; i<charsCount;i++) {
+				value += 40;
 			}
-			else if(charsCount == 2) value = 80;
-			else if(charsCount == 1) value = 40;
 		}
 
 		return value;
 	}
 
 }
+
 
 
