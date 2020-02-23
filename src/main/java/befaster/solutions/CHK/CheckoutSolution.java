@@ -9,8 +9,10 @@ public class CheckoutSolution {
 		int charValueD = charValue(skus, 'D');
 		int charValueE = charValue(skus, 'E');
 		if(skus != null && skus.matches("[A-E]+")) {
-			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') == 1) {
+			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') >= 1 ) {
 				charValueB -= 30;
+			} else if(charCount(skus, 'E') == 4 && charCount(skus, 'B') == 2) {
+				charValueB -= 60;
 			}
 			return charValueA + charValueB + charValueC + charValueD + charValueE;
 		} else if(skus.equals("")) {
@@ -98,3 +100,4 @@ public class CheckoutSolution {
 	}
 
 }
+
