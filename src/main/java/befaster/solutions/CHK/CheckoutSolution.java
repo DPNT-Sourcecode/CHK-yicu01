@@ -32,36 +32,71 @@ public class CheckoutSolution {
 		if(skus != null && skus.matches("[A-Z]+")) {
 			if(charCount(skus, 'A') >= 5) {
 				if(charCount(skus, 'A') < 8)
-					charValueA -= 50;
+					charA -= 50;
 				else if(charCount(skus, 'A') < 10)
-					charValueA -= 70;
+					charA -= 70;
 				else if(charCount(skus, 'A') < 13) 
-					charValueA -= 100;
+					charA -= 100;
 				else if(charCount(skus, 'A') < 15) 
-					charValueA -= 120;
+					charA -= 120;
 				else if(charCount(skus, 'A') < 18)
-					charValueA -= 150;
+					charA -= 150;
 			} else if(charCount(skus, 'A') > 2 && charCount(skus, 'A') < 5) 
-				charValueA -= 20;
-
+				charA -= 20;
+			System.out.println("Final A ="+charA);
+			
 			if(charCount(skus, 'B') > 1 && charCount(skus, 'B') < 4) 
-				charValueB -= 15;
+				charB -= 15;
 			else if(charCount(skus, 'B') >= 4 && charCount(skus, 'B') < 6) 
-				charValueB -= 30;
+				charB -= 30;
 
 			if((charCount(skus, 'E') >= 2 && charCount(skus, 'B') == 2) && (charCount(skus, 'E') < 4 && charCount(skus, 'B') == 2)) 
-				charValueB -= 15;
+				charB -= 15;
 			else if((charCount(skus, 'E') >= 2 && charCount(skus, 'B') >= 1) && (charCount(skus, 'E') < 4 && charCount(skus, 'B') >= 1)) 
-				charValueB -= 30;
+				charB -= 30;
 			else if((charCount(skus, 'E') >= 4 && charCount(skus, 'B') == 2) && (charCount(skus, 'E') < 6 && charCount(skus, 'B') == 2)) 
-				charValueB -= 45;
+				charB -= 45;
+			System.out.println("Final B ="+charB);
 
 			if(charCount(skus, 'F') > 2 && charCount(skus, 'F') < 6) 
-				charValueF -= 10;
+				charF -= 10;
 			else if(charCount(skus, 'F') >= 6 && charCount(skus, 'F') < 9) 
-				charValueF -= 20;
+				charF -= 20;
+			System.out.println("Final F ="+charF);
+
+			if(charCount(skus, 'H') >= 10) {
+				charH -= 20;
+			} else if(charCount(skus, 'H') > 4 && charCount(skus, 'H') < 10) 
+				charH -= 5;
+			System.out.println("Final H ="+charH);
+			if(charCount(skus, 'K') > 1 && charCount(skus, 'K') < 4) 
+				charB -= 10;
+			else if(charCount(skus, 'K') >= 4 && charCount(skus, 'K') < 6) 
+				charB -= 20;
+			if(charCount(skus, 'N') >= 3 && charCount(skus, 'N') < 6 && charCount(skus, 'M') >= 1) 
+				charM -= 15;
+			if(charCount(skus, 'P') > 4 && charCount(skus, 'P') < 10) 
+				charB -= 50;
+			else if(charCount(skus, 'P') >= 10 && charCount(skus, 'P') < 15) 
+				charB -= 100;
+			if(charCount(skus, 'Q') > 2 && charCount(skus, 'Q') < 6) 
+				charB -= 10;
+			else if(charCount(skus, 'Q') >= 6 && charCount(skus, 'Q') < 9) 
+				charB -= 20;
+			if(charCount(skus, 'R') >= 3 && charCount(skus, 'R') < 6 && charCount(skus, 'Q') == 1) 
+				charM -= 30;
+			if(charCount(skus, 'U') > 2 && charCount(skus, 'U') < 6) 
+				charF -= 40;
+			else if(charCount(skus, 'U') >= 6 && charCount(skus, 'U') < 9) 
+				charF -= 80;
+			if(charCount(skus, 'V') >= 3) {
+				charH -= 20;
+			} else if(charCount(skus, 'V') > 1 && charCount(skus, 'V') < 3) 
+				charH -= 10;
 			
-			return charValueA + charValueB + charValueC + charValueD + charValueE + charValueF;
+			int total = charA+charB+charC+charD+charE+charF+charG+charH+charI+charJ+charK+charL+charM+charN+charO+charP+charQ+charR+charS+charT+charU+charV+charW+charX+charY+charZ;
+			
+			return total;
 		} else if(skus.equals("")) return 0;
 		 else return -1;
 
@@ -100,9 +135,89 @@ public class CheckoutSolution {
 			for(int i=0; i<charsCount;i++) {
 				value += 40;
 			}
-		} else { //c='F'
+		} else if(c == 'F') {
+			for(int i=0; i<charsCount;i++) {
+				value += 10;
+			}
+		} else if(c == 'G') {
+			for(int i=0; i<charsCount;i++) {
+				value += 20;
+			}
+		} else if(c == 'H') {
+			for(int i=0; i<charsCount;i++) {
+				value += 10;
+			}
+		} else if(c == 'I') {
+			for(int i=0; i<charsCount;i++) {
+				value += 35;
+			}
+		} else if(c == 'J') {
+			for(int i=0; i<charsCount;i++) {
+				value += 60;
+			}
+		} else if(c == 'K') {
+			for(int i=0; i<charsCount;i++) {
+				value += 80;
+			}
+		} else if(c == 'L') {
+			for(int i=0; i<charsCount;i++) {
+				value += 90;
+			}
+		} else if(c == 'M') {
+			for(int i=0; i<charsCount;i++) {
+				value += 15;
+			}
+		} else if(c == 'N') {
+			for(int i=0; i<charsCount;i++) {
+				value += 40;
+			}
+		} else if(c == 'O') {
+			for(int i=0; i<charsCount;i++) {
+				value += 10;
+			}
+		} else if(c == 'P') {
+			for(int i=0; i<charsCount;i++) {
+				value += 50;
+			}
+		} else if(c == 'Q') {
+			for(int i=0; i<charsCount;i++) {
+				value += 30;
+			}
+		} else if(c == 'R') {
+			for(int i=0; i<charsCount;i++) {
+				value += 50;
+			}
+		} else if(c == 'S') {
+			for(int i=0; i<charsCount;i++) {
+				value += 30;
+			}
+		} else if(c == 'T') {
+			for(int i=0; i<charsCount;i++) {
+				value += 20;
+			}
+		} else if(c == 'U') {
+			for(int i=0; i<charsCount;i++) {
+				value += 40;
+			}
+		} else if(c == 'V') {
+			for(int i=0; i<charsCount;i++) {
+				value += 50;
+			}
+		} else if(c == 'W') {
+			for(int i=0; i<charsCount;i++) {
+				value += 20;
+			}
+		} else if(c == 'X') {
+			for(int i=0; i<charsCount;i++) {
+				value += 90;
+			}
+		} else if(c == 'Y') {
+			for(int i=0; i<charsCount;i++) {
+				value += 10;
+			}
+		} else { //c='Z'
 			for(int i=0;i<charsCount;i++) {
-					value += 10;
+					value += 50;
 			}
 		}
 
@@ -110,4 +225,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
