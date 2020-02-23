@@ -20,16 +20,15 @@ public class CheckoutSolution {
 					charValueA -= 120;
 				else if(charCount(skus, 'A') < 18)
 					charValueA -= 150;
-			} else if(charCount(skus, 'A') >= 3) {
+			} else if(charCount(skus, 'A') >= 3) 
 				charValueA -= 20;
-			}
-			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') >= 1 || charCount(skus, 'E') < 4 && charCount(skus, 'B') == 1) {
-				charValueB -= 30;
-			} else if(charCount(skus, 'E') == 4 && charCount(skus, 'B') >= 2 || charCount(skus, 'E') < 6 && charCount(skus, 'B') == 2) {
-				charValueB -= 45;
-			} else if(charCount(skus, 'B') == 2) {
+			if(charCount(skus, 'B') == 2) {
 				charValueB -= 15;
 			}
+			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') >= 1 || charCount(skus, 'E') < 4 && charCount(skus, 'B') == 1) 
+				charValueB -= 30;
+			else if(charCount(skus, 'E') == 4 && charCount(skus, 'B') >= 2 || charCount(skus, 'E') < 6 && charCount(skus, 'B') == 2) 
+				charValueB -= 45;
 			return charValueA + charValueB + charValueC + charValueD + charValueE;
 		} else if(skus.equals("")) {
 			return 0;
@@ -113,6 +112,7 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
 
