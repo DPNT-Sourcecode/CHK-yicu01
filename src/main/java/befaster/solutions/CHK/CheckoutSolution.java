@@ -68,43 +68,45 @@ public class CheckoutSolution {
 			else if(charCount(skus, 'H') > 4 && charCount(skus, 'H') < 10) 
 				charH -= 5;
 			if(charCount(skus, 'K') > 1 && charCount(skus, 'K') < 4) 
-				charB -= 10;
+				charK -= 10;
 			else if(charCount(skus, 'K') >= 4 && charCount(skus, 'K') < 6) 
-				charB -= 20;
-			if(charCount(skus, 'N') >= 3 && charCount(skus, 'N') < 6 && charCount(skus, 'M') >= 1) 
+				charK -= 20;
+			if((charCount(skus, 'N') >= 3 && charCount(skus, 'M') >= 1) && (charCount(skus, 'N') < 6 && charCount(skus, 'M') >= 1)) 
 				charM -= 15;
+			else if((charCount(skus, 'N') >= 6 && charCount(skus, 'M') == 2) && (charCount(skus, 'N') < 9 && charCount(skus, 'M') == 2)) 
+				charM -= 30;
 			if(charCount(skus, 'P') > 4 && charCount(skus, 'P') < 10) 
-				charB -= 50;
+				charP -= 50;
 			else if(charCount(skus, 'P') >= 10 && charCount(skus, 'P') < 15) 
-				charB -= 100;
+				charP -= 100;
 			if(charCount(skus, 'Q') > 2 && charCount(skus, 'Q') < 6) 
-				charB -= 10;
+				charQ -= 10;
 			else if(charCount(skus, 'Q') >= 6 && charCount(skus, 'Q') < 9) 
-				charB -= 20;
+				charQ -= 20;
 			if((charCount(skus, 'R') >= 3 && charCount(skus, 'Q') >= 1) && (charCount(skus, 'R') < 6 && charCount(skus, 'Q') >= 1)) 
-				charB -= 30;
+				charQ -= 30;
 			else if((charCount(skus, 'R') >= 6 && charCount(skus, 'Q') == 2) && (charCount(skus, 'R') < 9 && charCount(skus, 'Q') == 2)) 
-				charB -= 60;
+				charQ -= 60;
 			if(charCount(skus, 'U') > 3 && charCount(skus, 'U') < 8) 
-				charF -= 40;
+				charU -= 40;
 			else if(charCount(skus, 'U') >= 8 && charCount(skus, 'U') < 12) 
-				charF -= 80;
+				charU -= 80;
 			if(charCount(skus, 'V') >= 12 && charCount(skus, 'V') < 14)
-				charH -= 80;
+				charV -= 80;
 			else if(charCount(skus, 'V') >= 11 && charCount(skus, 'V') < 12)
-				charH -= 70;
+				charV -= 70;
 			else if(charCount(skus, 'V') >= 9 && charCount(skus, 'V') < 11)
-				charH -= 60;
+				charV -= 60;
 			else if(charCount(skus, 'V') >= 8 && charCount(skus, 'V') < 9)
-				charH -= 50;
+				charV -= 50;
 			else if(charCount(skus, 'V') >= 6 && charCount(skus, 'V') < 8)
-				charH -= 40;
+				charV -= 40;
 			else if(charCount(skus, 'V') >= 5 && charCount(skus, 'V') < 6)
-				charH -= 30;
+				charV -= 30;
 			else if(charCount(skus, 'V') >= 3 && charCount(skus, 'V') < 5)
-				charH -= 20;
+				charV -= 20;
 			else if(charCount(skus, 'V') > 1 && charCount(skus, 'V') < 3) 
-				charH -= 10;
+				charV -= 10;
 			
 			int total = charA+charB+charC+charD+charE+charF+charG+charH+charI+charJ+charK+charL+charM+charN+charO+charP+charQ+charR+charS+charT+charU+charV+charW+charX+charY+charZ;
 			
@@ -237,3 +239,4 @@ public class CheckoutSolution {
 	}
 
 }
+
