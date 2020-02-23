@@ -101,6 +101,8 @@ public class CheckoutSolution {
 				charH -= 20;
 			else if(charCount(skus, 'V') > 1 && charCount(skus, 'V') < 3) 
 				charH -= 10;
+			else
+				charH -= 70;
 			
 			int total = charA+charB+charC+charD+charE+charF+charG+charH+charI+charJ+charK+charL+charM+charN+charO+charP+charQ+charR+charS+charT+charU+charV+charW+charX+charY+charZ;
 			
@@ -233,5 +235,6 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
