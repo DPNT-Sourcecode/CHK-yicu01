@@ -76,9 +76,13 @@ public class CheckoutSolution {
 			for(int i=0; i<charsCount;i++) {
 				value += 15;
 			}
-		} else { //c='E'
+		} else if(c == 'E') {
 			for(int i=0; i<charsCount;i++) {
 				value += 40;
+			}
+		} else { //c='F'
+			for(int i=0;i<charsCount;i++) {
+					value += 10;
 			}
 		}
 
@@ -86,4 +90,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
