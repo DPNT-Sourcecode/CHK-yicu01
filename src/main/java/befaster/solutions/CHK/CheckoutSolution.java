@@ -43,7 +43,6 @@ public class CheckoutSolution {
 					charA -= 150;
 			} else if(charCount(skus, 'A') > 2 && charCount(skus, 'A') < 5) 
 				charA -= 20;
-			System.out.println("Final A ="+charA);
 			
 			if(charCount(skus, 'B') > 1 && charCount(skus, 'B') < 4) 
 				charB -= 15;
@@ -56,19 +55,16 @@ public class CheckoutSolution {
 				charB -= 30;
 			else if((charCount(skus, 'E') >= 4 && charCount(skus, 'B') == 2) && (charCount(skus, 'E') < 6 && charCount(skus, 'B') == 2)) 
 				charB -= 45;
-			System.out.println("Final B ="+charB);
 
 			if(charCount(skus, 'F') > 2 && charCount(skus, 'F') < 6) 
 				charF -= 10;
 			else if(charCount(skus, 'F') >= 6 && charCount(skus, 'F') < 9) 
 				charF -= 20;
-			System.out.println("Final F ="+charF);
 
 			if(charCount(skus, 'H') >= 10) {
 				charH -= 20;
 			} else if(charCount(skus, 'H') > 4 && charCount(skus, 'H') < 10) 
 				charH -= 5;
-			System.out.println("Final H ="+charH);
 			if(charCount(skus, 'K') > 1 && charCount(skus, 'K') < 4) 
 				charB -= 10;
 			else if(charCount(skus, 'K') >= 4 && charCount(skus, 'K') < 6) 
@@ -85,9 +81,9 @@ public class CheckoutSolution {
 				charB -= 20;
 			if(charCount(skus, 'R') >= 3 && charCount(skus, 'R') < 6 && charCount(skus, 'Q') == 1) 
 				charM -= 30;
-			if(charCount(skus, 'U') > 2 && charCount(skus, 'U') < 6) 
+			if(charCount(skus, 'U') > 3 && charCount(skus, 'U') < 8) 
 				charF -= 40;
-			else if(charCount(skus, 'U') >= 6 && charCount(skus, 'U') < 9) 
+			else if(charCount(skus, 'U') >= 8 && charCount(skus, 'U') < 12) 
 				charF -= 80;
 			if(charCount(skus, 'V') >= 3) {
 				charH -= 20;
@@ -225,5 +221,6 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
