@@ -3,13 +3,33 @@ package befaster.solutions.CHK;
 public class CheckoutSolution {
 
 	public Integer checkout(String skus) {
-		int charValueA = charValue(skus, 'A');
-		int charValueB = charValue(skus, 'B');
-		int charValueC = charValue(skus, 'C');
-		int charValueD = charValue(skus, 'D');
-		int charValueE = charValue(skus, 'E');
-		int charValueF = charValue(skus, 'F');
-		if(skus != null && skus.matches("[A-F]+")) {
+		int charA = charValue(skus, 'A');
+		int charB = charValue(skus, 'B');
+		int charC = charValue(skus, 'C');
+		int charD = charValue(skus, 'D');
+		int charE = charValue(skus, 'E');
+		int charF = charValue(skus, 'F');
+		int charG = charValue(skus, 'G');
+		int charH = charValue(skus, 'H');
+		int charI = charValue(skus, 'I');
+		int charJ = charValue(skus, 'J');
+		int charK = charValue(skus, 'K');
+		int charL = charValue(skus, 'L');
+		int charM = charValue(skus, 'M');
+		int charN = charValue(skus, 'N');
+		int charO = charValue(skus, 'O');
+		int charP = charValue(skus, 'P');
+		int charQ = charValue(skus, 'Q');
+		int charR = charValue(skus, 'R');
+		int charS = charValue(skus, 'S');
+		int charT = charValue(skus, 'T');
+		int charU = charValue(skus, 'U');
+		int charV = charValue(skus, 'V');
+		int charW = charValue(skus, 'W');
+		int charX = charValue(skus, 'X');
+		int charY = charValue(skus, 'Y');
+		int charZ = charValue(skus, 'Z');
+		if(skus != null && skus.matches("[A-Z]+")) {
 			if(charCount(skus, 'A') >= 5) {
 				if(charCount(skus, 'A') < 8)
 					charValueA -= 50;
@@ -90,3 +110,4 @@ public class CheckoutSolution {
 	}
 
 }
+
