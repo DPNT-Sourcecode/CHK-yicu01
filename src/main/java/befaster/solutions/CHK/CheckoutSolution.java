@@ -79,9 +79,9 @@ public class CheckoutSolution {
 				charB -= 10;
 			else if(charCount(skus, 'Q') >= 6 && charCount(skus, 'Q') < 9) 
 				charB -= 20;
-			if((charCount(skus, 'R') >= 4 && charCount(skus, 'Q') >= 1) && (charCount(skus, 'R') < 8 && charCount(skus, 'Q') >= 1)) 
+			if((charCount(skus, 'R') >= 3 && charCount(skus, 'Q') >= 1) && (charCount(skus, 'R') < 6 && charCount(skus, 'Q') >= 1)) 
 				charB -= 30;
-			else if((charCount(skus, 'R') >= 8 && charCount(skus, 'Q') == 2) && (charCount(skus, 'R') < 12 && charCount(skus, 'Q') == 2)) 
+			else if((charCount(skus, 'R') >= 6 && charCount(skus, 'Q') == 2) && (charCount(skus, 'R') < 9 && charCount(skus, 'Q') == 2)) 
 				charB -= 60;
 			
 //			if(charCount(skus, 'R') >= 4 && charCount(skus, 'R') < 8 && charCount(skus, 'Q') == 1) 
@@ -228,6 +228,7 @@ public class CheckoutSolution {
 	}
 
 }
+
 
 
 
