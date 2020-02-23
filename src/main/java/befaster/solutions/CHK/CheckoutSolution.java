@@ -41,7 +41,7 @@ public class CheckoutSolution {
 			else if(charCount(skus, 'F') >= 4 && charCount(skus, 'F') < 6) 
 				charValueF -= 20;
 			
-			return charValueA + charValueB + charValueC + charValueD + charValueE;
+			return charValueA + charValueB + charValueC + charValueD + charValueE + charValueF;
 		} else if(skus.equals("")) return 0;
 		 else return -1;
 
@@ -86,3 +86,4 @@ public class CheckoutSolution {
 	}
 
 }
+
