@@ -59,7 +59,9 @@ public class CheckoutSolution {
 				charF -= 10;
 			else if(charCount(skus, 'F') >= 6 && charCount(skus, 'F') < 9) 
 				charF -= 20;
-			if(charCount(skus, 'H') >= 15 && charCount(skus, 'H') < 20)
+			if(charCount(skus, 'H') >= 20 && charCount(skus, 'H') < 25)
+				charH -= 40;
+			else if(charCount(skus, 'H') >= 15 && charCount(skus, 'H') < 20)
 				charH -= 25;
 			else if(charCount(skus, 'H') >= 10 && charCount(skus, 'H') < 15)
 				charH -= 20;
@@ -223,3 +225,4 @@ public class CheckoutSolution {
 	}
 
 }
+
