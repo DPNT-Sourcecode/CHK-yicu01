@@ -30,25 +30,22 @@ public class CheckoutSolution {
 		int charY = charValue(skus, 'Y');
 		int charZ = charValue(skus, 'Z');
 		if(skus != null && skus.matches("[A-Z]+")) {
-			if(charCount(skus, 'A') >= 5) {
-				if(charCount(skus, 'A') < 8)
-					charA -= 50;
-				else if(charCount(skus, 'A') < 10)
-					charA -= 70;
-				else if(charCount(skus, 'A') < 13) 
-					charA -= 100;
-				else if(charCount(skus, 'A') < 15) 
-					charA -= 120;
-				else if(charCount(skus, 'A') < 18)
-					charA -= 150;
-			} else if(charCount(skus, 'A') > 2 && charCount(skus, 'A') < 5) 
+			if(charCount(skus, 'A') > 2 && charCount(skus, 'A') < 5) 
 				charA -= 20;
-			
+			else if(charCount(skus, 'A') >= 5 && charCount(skus, 'A') < 8) 
+				charA -= 50;
+			else if(charCount(skus, 'A') >= 8 && charCount(skus, 'A') < 10) 
+				charA -= 70;
+			else if(charCount(skus, 'A') >= 10 && charCount(skus, 'A') < 13) 
+				charA -= 100;
+			else if(charCount(skus, 'A') >= 13 && charCount(skus, 'A') < 15) 
+				charA -= 120;
+			else if(charCount(skus, 'A') >= 15 && charCount(skus, 'A') < 18) 
+				charA -= 150;
 			if(charCount(skus, 'B') > 1 && charCount(skus, 'B') < 4) 
 				charB -= 15;
 			else if(charCount(skus, 'B') >= 4 && charCount(skus, 'B') < 6) 
 				charB -= 30;
-
 			if((charCount(skus, 'E') >= 2 && charCount(skus, 'B') == 2) && (charCount(skus, 'E') < 4 && charCount(skus, 'B') == 2)) 
 				charB -= 15;
 			else if((charCount(skus, 'E') >= 2 && charCount(skus, 'B') >= 1) && (charCount(skus, 'E') < 4 && charCount(skus, 'B') >= 1)) 
@@ -83,7 +80,7 @@ public class CheckoutSolution {
 				charQ -= 30;
 			else if((charCount(skus, 'R') >= 6 && charCount(skus, 'Q') == 2) && (charCount(skus, 'R') < 9 && charCount(skus, 'Q') == 2)) 
 				charQ -= 60;
-			else if(charCount(skus, 'Q') > 2 && charCount(skus, 'Q') < 6) 
+			if(charCount(skus, 'Q') > 2 && charCount(skus, 'Q') < 6) 
 				charQ -= 10;
 			else if(charCount(skus, 'Q') >= 6 && charCount(skus, 'Q') < 9) 
 				charQ -= 20;
@@ -239,3 +236,4 @@ public class CheckoutSolution {
 	}
 
 }
+
