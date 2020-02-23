@@ -1,14 +1,18 @@
 package befaster.solutions.CHK;
 
 public class CheckoutSolution {
-	public Integer checkout(String skus) {
 
+	public Integer checkout(String skus) {
+		int charValueA = charValue(skus, 'A');
 		int charValueB = charValue(skus, 'B');
+		int charValueC = charValue(skus, 'C');
+		int charValueD = charValue(skus, 'D');
+		int charValueE = charValue(skus, 'E');
 		if(skus != null && skus.matches("[A-E]+")) {
 			if(charCount(skus, 'E') == 2 && charCount(skus, 'B') == 1) {
 				charValueB -= 30;
 			}
-			return charValue(skus, 'A')+charValue(skus, 'B')+charValueB+charValue(skus, 'D')+charValue(skus, 'E');
+			return charValueA + charValueB + charValueC + charValueD + charValueE;
 		} else if(skus.equals("")) {
 			return 0;
 		} else {
@@ -94,4 +98,3 @@ public class CheckoutSolution {
 	}
 
 }
-
