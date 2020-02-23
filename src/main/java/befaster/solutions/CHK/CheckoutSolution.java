@@ -10,7 +10,10 @@ public class CheckoutSolution {
 		int charValueE = charValue(skus, 'E');
 		if(skus != null && skus.matches("[A-E]+")) {
 			if(charCount(skus, 'A') >= 5) {
-				charValueA -= 50;
+				if(charCount(skus, 'A') < 8)
+					charValueA -= 50;
+				else if(charCount(skus, 'A') < 10)
+					charValueA -= 80;
 			} else if(charCount(skus, 'A') >= 3) {
 				charValueA -= 20;
 			}
@@ -104,4 +107,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
