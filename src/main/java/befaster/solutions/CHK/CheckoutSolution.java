@@ -13,7 +13,13 @@ public class CheckoutSolution {
 				if(charCount(skus, 'A') < 8)
 					charValueA -= 50;
 				else if(charCount(skus, 'A') < 10)
-					charValueA -= 80;
+					charValueA -= 70;
+				else if(charCount(skus, 'A') < 13) 
+					charValueA -= 100;
+				else if(charCount(skus, 'A') < 15) 
+					charValueA -= 120;
+				else
+					charValueA -= 150;
 			} else if(charCount(skus, 'A') >= 3) {
 				charValueA -= 20;
 			}
@@ -107,5 +113,3 @@ public class CheckoutSolution {
 	}
 
 }
-
-
