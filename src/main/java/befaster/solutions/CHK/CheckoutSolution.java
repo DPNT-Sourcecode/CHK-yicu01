@@ -108,7 +108,7 @@ public class CheckoutSolution {
 				charV -= 20;
 			else if(charCount(skus, 'V') > 1 && charCount(skus, 'V') < 3) 
 				charV -= 10;
-			
+
 			int total = charA+charB+charC+charD+charE+charF+charG+charH+charI+charJ+charK+charL+charM+charN+charO+charP+charQ+charR+charS+charT+charU+charV+charW+charX+charY+charZ;
 			if(charCount(skus, 'S') == 3 || charCount(skus, 'T') == 3 || charCount(skus, 'Y') == 3 || (charCount(skus, 'S') + charCount(skus, 'T') + charCount(skus, 'Y')) == 3)
 				total -= 15;
@@ -120,133 +120,81 @@ public class CheckoutSolution {
 				total -= 6;
 			else if(charCount(skus, 'Z') == 3)
 				total -= 18;
-			
+
 			return total;
 		} else if(skus.equals("")) return 0;
-		 else return -1;
+		else return -1;
 
 	}
 
 	private int charCount(String str, char c) {
 		int count = 0;
 		for(char ch: str.toCharArray()) {
-			if(ch == c) {
+			if(ch == c) 
 				count++;
-			}
 		}
 		return count;
 	}
 
 	private int charValue(String str, char c) {
 		int value = 0;
-		int charsCount = charCount(str, c);
-		if(c == 'A') {
-			for(int i=0; i<charsCount;i++) {
+		for(int i=0; i<charCount(str, c);i++) {
+			if(c == 'A')
 				value += 50;
-			}
-		} else if(c == 'B') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'B') 
 				value += 30;
-			}
-		} else if(c == 'C') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'C') 
 				value += 20;
-			}
-		} else if(c == 'D') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'D') 
 				value += 15;
-			}
-		} else if(c == 'E') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'E') 
 				value += 40;
-			}
-		} else if(c == 'F') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'F') 
 				value += 10;
-			}
-		} else if(c == 'G') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'G') 
 				value += 20;
-			}
-		} else if(c == 'H') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'H') 
 				value += 10;
-			}
-		} else if(c == 'I') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'I') 
 				value += 35;
-			}
-		} else if(c == 'J') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'J') 
 				value += 60;
-			}
-		} else if(c == 'K') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'K') 
 				value += 70;
-			}
-		} else if(c == 'L') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'L') 
 				value += 90;
-			}
-		} else if(c == 'M') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'M') 
 				value += 15;
-			}
-		} else if(c == 'N') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'N') 
 				value += 40;
-			}
-		} else if(c == 'O') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'O') 
 				value += 10;
-			}
-		} else if(c == 'P') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'P') 
 				value += 50;
-			}
-		} else if(c == 'Q') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'Q') 
 				value += 30;
-			}
-		} else if(c == 'R') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'R') 
 				value += 50;
-			}
-		} else if(c == 'S') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'S') 
 				value += 20;
-			}
-		} else if(c == 'T') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'T') 
 				value += 20;
-			}
-		} else if(c == 'U') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'U') 
 				value += 40;
-			}
-		} else if(c == 'V') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'V') 
 				value += 50;
-			}
-		} else if(c == 'W') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'W') 
 				value += 20;
-			}
-		} else if(c == 'X') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'X') 
 				value += 17;
-			}
-		} else if(c == 'Y') {
-			for(int i=0; i<charsCount;i++) {
+			else if(c == 'Y') 
 				value += 20;
-			}
-		} else { //c='Z'
-			for(int i=0;i<charsCount;i++) {
+			else if(c == 'Z') 
 				value += 21;
-			}
 		}
 
 		return value;
 	}
 
 }
+
