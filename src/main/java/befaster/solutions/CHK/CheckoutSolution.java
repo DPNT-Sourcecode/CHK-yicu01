@@ -110,6 +110,10 @@ public class CheckoutSolution {
 				charV -= 10;
 			
 			int total = charA+charB+charC+charD+charE+charF+charG+charH+charI+charJ+charK+charL+charM+charN+charO+charP+charQ+charR+charS+charT+charU+charV+charW+charX+charY+charZ;
+			if(charCount(skus, 'S') == 3 || charCount(skus, 'T') == 3 || charCount(skus, 'Y') == 3)
+				total -= 15;
+			else if((charCount(skus, 'S') + charCount(skus, 'T') + charCount(skus, 'Y')) == 3) 
+				total -= 15;
 			
 			return total;
 		} else if(skus.equals("")) return 0;
@@ -240,3 +244,4 @@ public class CheckoutSolution {
 	}
 
 }
+
