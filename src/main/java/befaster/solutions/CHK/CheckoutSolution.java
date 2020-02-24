@@ -130,8 +130,7 @@ public class CheckoutSolution {
 	private int charCount(String str, char c) {
 		int count = 0;
 		for(char ch: str.toCharArray()) {
-			if(ch == c) 
-				count++;
+			if(ch == c) count++;
 		}
 		return count;
 	}
@@ -139,62 +138,37 @@ public class CheckoutSolution {
 	private int charValue(String str, char c) {
 		int value = 0;
 		for(int i=0; i<charCount(str, c);i++) {
-			if(c == 'A')
-				value += 50;
-			else if(c == 'B') 
-				value += 30;
-			else if(c == 'C') 
-				value += 20;
-			else if(c == 'D') 
-				value += 15;
-			else if(c == 'E') 
-				value += 40;
-			else if(c == 'F') 
-				value += 10;
-			else if(c == 'G') 
-				value += 20;
-			else if(c == 'H') 
-				value += 10;
-			else if(c == 'I') 
-				value += 35;
-			else if(c == 'J') 
-				value += 60;
-			else if(c == 'K') 
-				value += 70;
-			else if(c == 'L') 
-				value += 90;
-			else if(c == 'M') 
-				value += 15;
-			else if(c == 'N') 
-				value += 40;
-			else if(c == 'O') 
-				value += 10;
-			else if(c == 'P') 
-				value += 50;
-			else if(c == 'Q') 
-				value += 30;
-			else if(c == 'R') 
-				value += 50;
-			else if(c == 'S') 
-				value += 20;
-			else if(c == 'T') 
-				value += 20;
-			else if(c == 'U') 
-				value += 40;
-			else if(c == 'V') 
-				value += 50;
-			else if(c == 'W') 
-				value += 20;
-			else if(c == 'X') 
-				value += 17;
-			else if(c == 'Y') 
-				value += 20;
-			else if(c == 'Z') 
-				value += 21;
+			if(c == 'A') value += 50;
+			else if(c == 'B') value += 30;
+			else if(c == 'C') value += 20;
+			else if(c == 'D') value += 15;
+			else if(c == 'E') value += 40;
+			else if(c == 'F') value += 10;
+			else if(c == 'G') value += 20;
+			else if(c == 'H') value += 10;
+			else if(c == 'I') value += 35;
+			else if(c == 'J') value += 60;
+			else if(c == 'K') value += 70;
+			else if(c == 'L') value += 90;
+			else if(c == 'M') value += 15;
+			else if(c == 'N') value += 40;
+			else if(c == 'O') value += 10;
+			else if(c == 'P') value += 50;
+			else if(c == 'Q') value += 30;
+			else if(c == 'R') value += 50;
+			else if(c == 'S') value += 20;
+			else if(c == 'T') value += 20;
+			else if(c == 'U') value += 40;
+			else if(c == 'V') value += 50;
+			else if(c == 'W') value += 20;
+			else if(c == 'X') value += 17;
+			else if(c == 'Y') value += 20;
+			else if(c == 'Z') value += 21;
 		}
 
 		return value;
 	}
 
 }
+
 
