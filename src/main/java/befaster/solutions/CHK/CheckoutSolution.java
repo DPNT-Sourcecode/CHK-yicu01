@@ -114,6 +114,10 @@ public class CheckoutSolution {
 				total -= 15;
 			else if((charCount(skus, 'S') + charCount(skus, 'T') + charCount(skus, 'Y')) == 3) 
 				total -= 15;
+			else if((charCount(skus, 'S') + charCount(skus, 'T') + charCount(skus, 'X')) == 3)
+				total -= 12;
+			else if((charCount(skus, 'S') + charCount(skus, 'T') + charCount(skus, 'X')) == 6)
+				total -= 24;
 			
 			return total;
 		} else if(skus.equals("")) return 0;
@@ -244,6 +248,3 @@ public class CheckoutSolution {
 	}
 
 }
-
-
-
