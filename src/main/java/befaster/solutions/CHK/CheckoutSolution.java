@@ -176,7 +176,7 @@ public class CheckoutSolution {
 			}
 		} else if(c == 'K') {
 			for(int i=0; i<charsCount;i++) {
-				value += 80;
+				value += 70;
 			}
 		} else if(c == 'L') {
 			for(int i=0; i<charsCount;i++) {
@@ -208,7 +208,7 @@ public class CheckoutSolution {
 			}
 		} else if(c == 'S') {
 			for(int i=0; i<charsCount;i++) {
-				value += 30;
+				value += 20;
 			}
 		} else if(c == 'T') {
 			for(int i=0; i<charsCount;i++) {
@@ -228,15 +228,15 @@ public class CheckoutSolution {
 			}
 		} else if(c == 'X') {
 			for(int i=0; i<charsCount;i++) {
-				value += 90;
+				value += 17;
 			}
 		} else if(c == 'Y') {
 			for(int i=0; i<charsCount;i++) {
-				value += 10;
+				value += 20;
 			}
 		} else { //c='Z'
 			for(int i=0;i<charsCount;i++) {
-					value += 50;
+				value += 21;
 			}
 		}
 
@@ -244,4 +244,5 @@ public class CheckoutSolution {
 	}
 
 }
+
 
